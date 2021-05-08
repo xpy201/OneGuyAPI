@@ -4,7 +4,7 @@ WORKDIR /usr/src
 RUN apt update
 RUN apt install cron
 RUN git clone https://github.com/xpy201/OneGuyAPI
-WORKDIR /usr/src/OneGuyAPI
+WORKDIR /usr/src/OneGuyApp
 RUN pip3 install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple
 RUN chmod +x auto_down.sh
 RUN crontab auto_down.cron
